@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 120vh;
+    background-image: radial-gradient(at center, #F6D6D6, #0162F2 34%, #9694FF 36%, white 40%);
+    color: #e0e0e0;
+    backdrop-filter: blur(120px); 
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.navbar .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #36AFE0;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Glass Effect for Signup Form */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(18px); /* Blur effect */
+    -webkit-backdrop-filter: blur(18px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+    box-shadow: 8px 32px 0 rgba(0, 0, 0, 0.37); /* Soft shadow */
+    color: black;
+}
+
+.center h1 {
+    text-align: center;
+    color: #36AFE0;
+    margin: 0;
+    font-size: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.txt_field {
+    position: relative;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid black;
+    border-top: 0px solid transparent;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #36AFE0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -10px;
+    color: #36AFE0;
+    font-size: 12px;
+}
+
+.ss {
+    display: block; /* Makes the button behave like a block element */
+    padding: 10px 20px;
+    background-color: #36AFE0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px; /* Keep the text size appropriate for the button */
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ss:hover {
+    background-color: #278cb4; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.ss:active {
+    background-color: #1e6d91; /* Even darker shade when clicked */
+    transform: translateY(2px); /* Pressed-in effect */
+}
+
+
+.login_link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login_link a {
+    color: #36AFE0;
+    text-decoration: none;
+}
+
+.login_link a:hover {
+    text-decoration: underline;
+}
